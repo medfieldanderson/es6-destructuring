@@ -8,27 +8,34 @@ console.log(cars);
 
 const [honda, tesla] = cars;
 
-const {coloursByPopularity: [teslaTopColour], speedStats: {topSpeed: teslaTopSpeed}} = tesla;
-const {coloursByPopularity: [hondaTopColour], speedStats: {topSpeed: hondaTopSpeed}} = honda;
-
+const {
+  coloursByPopularity: [teslaTopColour],
+  speedStats: { topSpeed: teslaTopSpeed },
+} = tesla;
+const {
+  coloursByPopularity: [hondaTopColour],
+  speedStats: { topSpeed: hondaTopSpeed },
+} = honda;
 
 ReactDOM.render(
   <table>
-    <tr>
-      <th>Model</th>
-      <th>Top Speed</th>
-      <th>Top Color</th>
-    </tr>
-    <tr>
-      <td>{tesla.model}</td>
-      <td>{teslaTopSpeed}</td>
-      <td>{teslaTopColour}</td>
-    </tr>
-    <tr>
-      <td>{honda.model}</td>
-      <td>{hondaTopSpeed}</td>
-      <td>{hondaTopColour}</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>Model</th>
+        <th>Top Speed</th>
+        <th>Top Color</th>
+      </tr>
+      <tr>
+        <td>{tesla.model}</td>
+        <td>{teslaTopSpeed}</td>
+        <td>{teslaTopColour}</td>
+      </tr>
+      <tr>
+        <td>{honda.model}</td>
+        <td>{hondaTopSpeed}</td>
+        <td>{hondaTopColour}</td>
+      </tr>
+    </tbody>
   </table>,
   document.getElementById("root")
 );
